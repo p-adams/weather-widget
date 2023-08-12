@@ -1,9 +1,19 @@
-import { getGeocodeData } from "./weather-utils";
+import { $el } from "./utils";
+import { getForecast } from "./weather-utils";
 
 export async function setupWidget(element: HTMLDivElement) {
-  const data = await getGeocodeData("Fremont, CA");
-  console.log(data);
+  let query = "Fremont, CA";
+  const forecast = await getForecast(query);
+  console.log(forecast);
   element.innerHTML = `<div class="widget-outer">
-    widget
+    <input/>
+    <div class="widget-inner"/>
   </div>`;
+
+  const widgetCtr = $el(".widget-inner");
+  for (const item of forecast) {
+    const $item = document.createElement("div");
+    $item.innerHTML = `<div>${item.high}</div>`;
+    widgetCtr?.appendChild($item);
+  }
 }
