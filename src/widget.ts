@@ -1,4 +1,4 @@
-import { $el, $renderForecast } from "./utils";
+import { $el, $renderForecast } from "./render-utils";
 import { getForecast } from "./weather-utils";
 
 export async function setupWidget(element: HTMLDivElement) {
