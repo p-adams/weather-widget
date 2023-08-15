@@ -8,14 +8,6 @@ The **Weather Widget** is a simple and customizable web widget that displays cur
 
 - **Customization**: The widget's appearance can be customized using CSS to match the style of the hosting website or application.
 
-## Future Features
-
-- **Temperature**: The temperature is displayed in degrees Fahrenheit or Celsius, depending on user preferences.
-
-- **Weather Icons**: The widget shows weather icons corresponding to the current weather conditions, making it visually appealing and easy to understand.
-
-- **Location**: Users can set their preferred location to receive weather updates for that specific area.
-
 ## Installation
 
 To integrate the Weather Widget into your website, follow these steps:
@@ -40,20 +32,6 @@ To integrate the Weather Widget into your website, follow these steps:
 3. Configure the widget:
    In the `widget.ts` file, you'll find a section where you can customize the widget's behavior. You can set your preferred location, temperature unit, and more.
 
-## Configuration (IN PROGRESS)
-
-You can configure the Weather Widget by modifying the settings in the `widget.ts` file:
-
-```TypeScript
-// Weather Widget Configuration
-const widgetSettings = {
-  apiKey: 'YOUR_OPENWEATHERMAP_API_KEY',
-  location: 'New York, US', // Set your preferred location here
-  temperatureUnit: 'celsius', // Choose between 'celsius' and 'fahrenheit'
-};
-```
-
-Replace `'YOUR_OPENWEATHERMAP_API_KEY'` with your actual OpenWeatherMap API key. If you don't have an API key, you can obtain one by signing up on the [OpenWeatherMap website](https://openweathermap.org/).
 
 ## Customization
 
