@@ -12,7 +12,8 @@ export function $renderForecast<T extends HTMLElement = HTMLElement>(
 ) {
   for (const forecast of weeklyForecast) {
     const $forecast = document.createElement("div");
-    $forecast.innerHTML = `<div class="forecast-outer">
+    $forecast.innerHTML = `<div class="forecast-ctr">
+      <div>${new Date(forecast.data.time).toLocaleDateString()}</div>
       <div class="high">${forecast.high}</div>
       <div class="lo">${forecast.lo}</div>
     </div>`;
